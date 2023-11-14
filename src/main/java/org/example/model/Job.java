@@ -1,6 +1,6 @@
 // src/main/java/com/example/jobsite/model/Job.java
 
-package com.example.jobsite.model;
+package org.example.model;
 
 public class Job {
     private String position;

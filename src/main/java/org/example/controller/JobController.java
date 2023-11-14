@@ -1,26 +1,26 @@
 // src/main/java/com/example/job-site/controller/JobController.java
-package com.example.jobsite.controller;
+package org.example.controller;
 
-import com.example.jobsite.model.Job;
+import org.example.model.Job;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+@RestController
 public class JobController {
-
     private List<Job> jobList = new ArrayList<>();
 
     @GetMapping("/")
     public String showForm(Model model) {
-        model.addAttribute("job", new Job("a", "b"));
+        Job defaultJob = new Job("Software Developer", "City1");
+        model.addAttribute("job", defaultJob);
         return "index";
     }
-
     @PostMapping("/search")
     public String searchJobs(Job job, Model model) {
         // Implement logic to filter jobs based on position and location
@@ -32,7 +32,5 @@ public class JobController {
         model.addAttribute("jobs", jobList);
         return "result";
     }
-
-
 
 }

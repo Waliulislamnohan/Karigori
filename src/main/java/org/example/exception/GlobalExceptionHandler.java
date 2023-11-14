@@ -1,6 +1,6 @@
 // src/main/java/com/example/jobsite/exception/GlobalExceptionHandler.java
 
-package com.example.jobsite.exception;
+package org.example.exception;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;

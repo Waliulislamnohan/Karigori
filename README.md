@@ -1,1 +1,1 @@
-# Karigori( A beginner friendly career-choosing platform )
+# Karigori( A beginner-friendly career-choosing-platform )
